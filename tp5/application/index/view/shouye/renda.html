@@ -1,0 +1,545 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>两会文件-人大</title>
+<link href="__STATIC__/users/js/layui/css/layui.css" rel="stylesheet">
+<script src="__STATIC__/users/js/layui/layui.js"></script>
+<style>
+.top{
+	width:100%;
+	height:40px;
+	background-color:#FF3;
+	position:fixed;
+	z-index: 10;
+    right: 0;
+    top: 0;
+    margin-left: 0;
+	border-bottom:2px solid #CCC;
+	}
+.top_left{
+	width:70%;
+	height:40px;
+	background-color:#FFF;
+	float:left;
+	top:0;
+	border-right:2px solid #CCC;
+	}
+.top_right{
+	height:40px;
+	right:0;
+	width:30%;
+	float:right;
+	left:70.1%;
+	background-color:#FFF;
+	top:0;
+	position:absolute}	
+.top_pz{
+	width:auto;
+	height:40px;
+	float:left;
+	margin-top:0;
+	margin-left:60px;
+	line-height:40px;
+	padding-left:30px;
+	background-color:#FFF;
+	position:absolute;
+	font-size:30px;
+	font-family:"华文行楷";
+	color:#3CC;
+	padding-right:3px;
+	}		
+.top_img{
+	width:100px;
+	height:40px;
+	background-color:#FFF;
+	float:left;
+	margin-left:0;
+}
+.top_img1{
+	width:30px;
+	height:30px;
+	margin-left:20px;
+	line-height:50px;
+	margin-top:5px;
+	position:absolute;
+}
+ul,li,a{padding: 0;margin: 0;text-decoration: none;
+list-style:none;}
+a{color: black;}
+a:hover{color: crimson;}
+.ul_div1{
+	width:500px;
+	height:40px;
+	background-color:#FFF;
+	margin-left:0;
+	position:absolute;}
+.li_div1{
+	width:40px;
+	height:20px;
+	background-color:#FFF;
+	position:absolute;
+	margin-left:80px;
+	margin-top:10px;
+	line-height:20px;
+	text-align:center;
+	font-size:18px;
+	}
+.li_div2{
+	width:40px;
+	height:20px;
+	background-color:#FFF;
+	margin-left:200px;
+	position:absolute;
+	margin-top:10px;
+	line-height:20px;
+	text-align:center;
+	font-size:18px;
+	}	
+.li_div3{
+	width:40px;
+	height:20px;
+	background-color:#FFF;
+	margin-left:320px;
+	position:absolute;
+	margin-top:10px;
+	line-height:20px;
+	text-align:center;
+	font-size:18px;
+	}
+.sousuo{
+	width:100%;
+	height:60px;
+	position:absolute;
+	background-color:#FFF;
+	top:40px;
+	float:left;
+	left:0;}
+.sousuo_div1{
+	
+	width:400px;
+	height:35px;
+	align:center;
+	margin-left:610px;
+	display:inline;
+	margin-top:15px;
+	position:relative;
+	}
+.sousuo_div2{
+	width:60px;
+	height:39px;
+	text-align:center;
+	margin-top:15px;
+	display:inline;
+	background-color:#3CC;
+	position:absolute;}
+.ziliao{
+	width:100%;
+	height:80px;
+	top:100px;
+	background-color:#FFF;
+	float:left;
+	left:0;
+	text-align:center;
+	position:absolute;}
+.layui-nav .layui-nav-item{
+	width:250px;
+	}	
+.ziliao_ul{
+	width:100%;
+	height:80px;
+	left:0;
+	top:0;
+	position:absolute;}	
+.ziliao_shou{
+	width:auto;
+	position:absolute;
+	float:left;
+	margin-left:220px;
+	line-height:80px;
+	font-size:25px;
+	}
+.ziliao_quyu{
+	width:auto;
+	position:absolute;
+	float:left;
+	margin-left:420px;
+	line-height:80px;
+	font-size:25px;
+	}
+.ziliao_kuai{
+	width:auto;
+	position:absolute;
+	float:left;
+	margin-left:820px;
+	line-height:80px;
+	font-size:25px;
+	}
+.ziliao_yicheng{
+	width:auto;
+	position:absolute;
+	float:left;
+	margin-left:1220px;
+	line-height:80px;
+	font-size:25px;
+	}
+.ziliao_zi{
+	width:auto;
+	position:absolute;
+	float:left;
+	margin-left:1520px;
+	line-height:80px;
+	font-size:25px;
+	}
+.liu{
+	width:100%;
+	height:350px;
+	float:left;
+	left:0;
+	position:absolute;
+	top:160px;
+	background-color:#F00;}
+.liu_img{
+	width:100%;
+	height:350px;
+	position:absolute;
+	margin-top:0;
+	float:left;}
+.liu_h1{
+	width:auto;
+	height:100px;
+	margin-left:450px;
+	position:absolute;
+	font-size:90px;
+	margin-top:0;
+	font-family:"楷体";
+	letter-spacing:10px;
+	font-weight:200;}	
+.liu_h1_div{
+	width:100%;
+	height:150px;
+	position:absolute;
+	float:left;
+	margin-top:0;
+	}
+.wenxian{
+	position:absolute;
+	left:0;
+	top:510px;
+	width:100%;
+	height:auto;
+	}
+.wenxian_left{
+	width:250px;
+	height:auto;
+	left:220px;
+	top:0;
+	z-index:9;
+	position:absolute;
+	background-color:#FFF;
+	}	
+.wenxian_right{
+	width:800px;
+	height:auto;
+	left:500px;
+	top:0;
+	z-index:9;
+	position:absolute;
+	background-color:#FFF;
+	-webkit-box-shadow:0 4px 4px #999;
+	-moz-box-shadow:0 4px 4px #999;
+	box-shadow:0 4px 4px #999;}	
+.wenxian_li1{
+	width:250px;
+	margin-top:0;
+	margin-left:0;
+	height:60px;
+	position:absolute;
+	border-bottom:1px solid #999;
+	background-color:#EDEBEB;
+	-webkit-box-shadow:0 4px 4px #999;
+	-moz-box-shadow:0 4px 4px #999;
+	box-shadow:0 4px 4px #999;}
+.wenxian_a1{
+	line-height:60px;
+	position:absolute;
+	margin-left:20px;
+	font-size:17px;}
+.wenxian_li2{
+	width:250px;
+	margin-top:61px;
+	margin-left:0;
+	height:60px;
+	position:absolute;
+	border-bottom:1px solid #999;
+	background-color:#EDEBEB;
+	-webkit-box-shadow:0 4px 4px #999;
+	-moz-box-shadow:0 4px 4px #999;
+	box-shadow:0 4px 4px #999;}
+.wenxian_a2{
+	line-height:60px;
+	position:absolute;
+	margin-left:20px;
+	font-size:17px;}
+.wenxian_li3{
+	width:250px;
+	margin-top:122px;
+	margin-left:0;
+	height:60px;
+	position:absolute;
+	border-bottom:1px solid #999;
+	background-color:#EDEBEB;
+	-webkit-box-shadow:0 4px 4px #999;
+	-moz-box-shadow:0 4px 4px #999;
+	box-shadow:0 4px 4px #999;}
+.wenxian_a3{
+	line-height:60px;
+	position:absolute;
+	margin-left:20px;
+	font-size:17px;}
+.wenxian_li4{
+	width:250px;
+	margin-top:183px;
+	margin-left:0;
+	height:60px;
+	position:absolute;
+	border-bottom:1px solid #999;
+	background-color:#EDEBEB;
+	-webkit-box-shadow:0 4px 4px #999;
+	-moz-box-shadow:0 4px 4px #999;
+	box-shadow:0 4px 4px #999;}
+.wenxian_a4{
+	line-height:60px;
+	position:absolute;
+	margin-left:20px;
+	font-size:17px;}
+.wenxian_li5{
+	width:250px;
+	margin-top:244px;
+	margin-left:0;
+	height:60px;
+	position:absolute;
+	border-bottom:1px solid #999;
+	background-color:#EDEBEB;
+	-webkit-box-shadow:0 4px 4px #999;
+	-moz-box-shadow:0 4px 4px #999;
+	box-shadow:0 4px 4px #999;}
+.wenxian_a5{
+	line-height:60px;
+	position:absolute;
+	margin-left:20px;
+	font-size:17px;}
+.wenxian_li6{
+	width:250px;
+	margin-top:305px;
+	margin-left:0;
+	height:60px;
+	position:absolute;
+	border-bottom:1px solid #999;
+	background-color:#EDEBEB;
+	-webkit-box-shadow:0 4px 4px #999;
+	-moz-box-shadow:0 4px 4px #999;
+	box-shadow:0 4px 4px #999;}
+.wenxian_a6{
+	line-height:60px;
+	position:absolute;
+	margin-left:20px;
+	font-size:17px;}
+.wenxian_li7{
+	width:250px;
+	margin-top:366px;
+	margin-left:0;
+	height:60px;
+	position:absolute;
+	border-bottom:1px solid #999;
+	background-color:#EDEBEB;
+	-webkit-box-shadow:0 4px 4px #999;
+	-moz-box-shadow:0 4px 4px #999;
+	box-shadow:0 4px 4px #999;}
+.wenxian_a7{
+	line-height:60px;
+	position:absolute;
+	margin-left:20px;
+	font-size:17px;}
+.wenxix_li{
+	margin-left:0;
+	position:absolute;
+	background-color:#FFF;
+	font-size:16px;
+	margin-top:70px;}	
+.wenh3_div{
+	width:800px;
+	height:60px;
+	position:absolute;
+	margin-left:0;
+	margin-top:0;
+	border-bottom:2px solid #CCC;
+	background-color:#EDEBEB;}
+.wen_h3{
+	width:auto;
+	position:absolute;
+	margin-top:20px;
+	margin-left:40px;
+	font-size:25px;
+	font-weight:bold;}
+.wen_h4{
+	width:auto;
+	position:absolute;
+	margin-top:27px;
+	margin-left:180px;
+	font-size:17px;
+	font-weight:500;}
+.wen_h41{
+	width:auto;
+	position:absolute;
+	margin-top:27px;
+	margin-left:220px;
+	font-size:17px;
+	font-weight:500;}
+.wen_h42{
+	width:auto;
+	position:absolute;
+	margin-top:27px;
+	margin-left:290px;
+	font-size:17px;
+	font-weight:500;}
+.wen_h43{
+	width:auto;
+	position:absolute;
+	margin-top:27px;
+	margin-left:295px;
+	font-size:17px;
+	font-weight:500;}	
+.wen_p{
+	width:auto;
+	position:absolute;
+	margin-top:30px;
+	margin-left:215px;
+	font-size:17px;
+	font-weight:500;
+	}	
+.wen_p1{
+	width:auto;
+	position:absolute;
+	margin-top:30px;
+	margin-left:290px;
+	font-size:17px;
+	font-weight:500;
+	}		
+.xix_table{
+	width:100%;;
+	border:0;
+	word-break:break-strict;}
+.bottom{
+	width:100%;
+	height:20px;
+	top:2000px;
+	position:absolute;
+	text-align:center;
+	left:0;
+	background-color:#F00;}																
+</style>	
+</head>
+
+<body>
+<div class="top">
+  <div class="top_left">
+     <div class="top_img">
+       <img src="__STATIC__/image/5.png" class="top_img1"/>
+     </div>
+     <p class="top_pz">中国涉外政务服务系统</p>   
+  </div>
+  <div class="top_right">
+    <ul class="ul_div1">
+      <li class="li_div1"><a href="">首页</a></li>
+      <li class="li_div2"><a href="">语言</a></li>
+      <li class="li_div3"><a href="">登录</a></li>
+    </ul>
+  
+  </div>
+</div>
+<div class="sousuo">
+   <form action="" method="post">
+   <input type="text" class="sousuo_div1" name="sousuo" placeholder="搜索" autocomplete="off"/>
+   <button class="sousuo_div2" type="submit" id="sousuo">搜索</button>
+   </form>
+</div>
+<div class="ziliao">
+	
+	<ul class="layui-nav" lay-filter="">
+	  <li class="layui-nav-item" style="color: #007DDB;"><a href="">首页</a>      </li>
+	  <li class="layui-nav-item "><a href="">区域资源赋能场</a></li>
+	  <li class="layui-nav-item"><a href="">中国便车快通道</a></li>
+	  <li class="layui-nav-item"><a href="">国家元首议程表</a></li>
+	  <li class="layui-nav-item layui-this">
+		<a href="javascript:;">资料</a>
+		<dl class="layui-nav-child"> <!-- 二级菜单 -->
+		  <dd><a href="{:url('Index/wenxian')}">党的文献</a></dd>
+		  <dd><a href="{:url('Index/falv')}">法律法规</a></dd>
+		  <dd><a href="{:url('Index/lianghui')}">两会文件</a></dd>
+		  <dd><a href="{:url('Index/zhuance')}">专项政策</a></dd>
+		  <dd><a href="{:url('Index/jianghua')}">领导讲话</a></dd>
+		  <dd><a href="{:url('Index/biaogui')}">标准规范</a></dd>
+		  <dd><a href="{:url('Index/zhongda')}">重大事件</a></dd>
+		</dl>
+	  </li>
+	</ul>
+</div>
+ 
+<script>
+//注意：导航 依赖 element 模块，否则无法进行功能性操作
+layui.use('element', function(){
+  var element = layui.element;
+  
+  //…
+});
+</script>
+<div class="liu">
+  <div class="">
+     <img src="__STATIC__/image/5.jpg" class="liu_img"/>
+  </div>
+</div>
+<div class="wenxian">
+   <div class="wenxian_left">
+     <ul class="">
+       <li class="wenxian_li1"><a href="{:url('Index/wenxian')}" class="wenxian_a1">党的文献</a></li>
+       <li class="wenxian_li2"><a href="{:url('Index/falv')}" class="wenxian_a2">法律法规</a></li>
+       <li class="wenxian_li3"><a href="{:url('Index/lianghui')}" class="wenxian_a3">两会文件</a></li>
+       <li class="wenxian_li4"><a href="{:url('Index/zhuance')}" class="wenxian_a4">专项政策</a></li>
+       <li class="wenxian_li5"><a href="{:url('Index/jianghua')}" class="wenxian_a5">领导讲话</a></li>
+       <li class="wenxian_li6"><a href="{:url('Index/biaogui')}" class="wenxian_a6">标准规范</a></li>
+       <li class="wenxian_li7"><a href="{:url('Index/zhongda')}" class="wenxian_a7">重大事件</a></li>
+     </ul>
+   </div>
+   <div class="wenxian_right">
+      <div class="wenh3_div">
+        <h3 class="wen_h3">人大</h3>
+        <h4 class="wen_h4"><a href="{:url('Index/shouye')}">资料</a></h4>
+        <p class="wen_p">/</p>
+        <h4 class="wen_h41"><a href="{:url('Index/lianghui')}">两会文件</a></h4>
+        <!--<p class="wen_p1">/</p>
+        <h4 class="wen_h43"><a href="{:url('Index/falv')}">国家法律</a></h4>-->
+        <h4 class="wen_h42">/详情</h4>
+      </div>   
+      <div class="wenxix_li">   
+        <table class="xix_table">
+        {foreach $info as $list}
+          <tr>
+            <td>
+             {$list.incide}</td>
+          </tr>
+        {/foreach}
+       </table>
+      </div>
+   </div>
+</div>
+<div class="bottom">
+  <div class="layui-row layui-col-space20" id="fooder" style="background-color:rgb(250, 250, 250) ">
+		版权信息：&copy;电子科技大学成都学院，云计算科学与技术系所有<br/>
+		2019-2020
+  </div>
+</div>
+</body>
+</html>
+
+

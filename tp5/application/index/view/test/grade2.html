@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>数智课堂</title>
+  <link rel="stylesheet" href="__STATIC__/layui/css/layui.css">
+  <script src="__STATIC__/jQuery/jquery-3.3.1.min.js"></script>
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+  <div class="layui-header" >
+    <div class="layui-logo" >数智课堂</div>
+    <!-- 头部区域 -->
+    <ul class="layui-nav layui-layout-left">
+      <li class="layui-nav-item"><a href=""><i class="layui-icon layui-icon-spread-left"></i>dashboard</a></li>
+      <!--li class="layui-nav-item"><a href="">管理</a></li>
+      <li class="layui-nav-item"><a href="">用户</a></li>
+      <li class="layui-nav-item">
+        <a href="javascript:;">其它系统</a>
+        <dl class="layui-nav-child">
+          <dd><a href="">邮件管理</a></dd>
+          <dd><a href="">消息管理</a></dd>
+          <dd><a href="">授权管理</a></dd>
+        </dl>
+      </li-->
+    </ul>
+    <ul class="layui-nav layui-layout-right">
+      <li class="layui-nav-item">
+        <a href="javascript:;">
+          <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+          admin
+        </a>
+        <dl class="layui-nav-child">
+          <dd><a href="">基本资料</a></dd>
+          <dd><a href="">安全设置</a></dd>
+        </dl>
+      </li>
+      <li class="layui-nav-item"><a href=""><i class="layui-icon layui-icon-logout"></i>退出</a></li>
+    </ul>
+  </div>
+  
+  <div class="layui-side layui-bg-black" >
+    <div class="layui-side-scroll" >
+      <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+      <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+          <li class="layui-nav-item"><a href="">首页</a></li>
+        <li class="layui-nav-item"><a href="">统计反馈</a></li>
+        <!--li class="layui-nav-item layui-nav-itemed"-->
+          <li class="layui-nav-item">
+          <a class="" href="javascript:;">学生助手</a>
+          <dl class="layui-nav-child">
+            <dd><a href="javascript:;">列表一</a></dd>
+            <dd><a href="javascript:;">列表二</a></dd>
+            <dd><a href="javascript:;">列表三</a></dd>
+            <dd><a href="">超链接</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item layui-nav-itemed">
+          <a href="javascript:;">后台管理</a>
+          <dl class="layui-nav-child">
+            <dd><a href="javascript:;">机构管理</a></dd>
+            <dd><a href="javascript:;">用户管理</a></dd>
+            <dd><a href="javascript:;">课程管理</a></dd>
+            <dd><a href="javascript:;">课堂管理</a></dd>
+            <dd><a href="javascript:;">班级管理</a></dd>
+            <dd class="main_left">
+            <!--a  href="javascript:;" data-id="1" data-title="年级管理" data-url="{:url('index/test3')}"class="site-demo-active" data-type="tabAdd">年级管理</a-->                 
+            <a href="javascript:;">年级管理</a>
+            <!--a href="{:url('index/test3')}">年级管理</a-->                   
+            </dd>
+            <dd><a href="javascript:;">课表管理</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item">
+          <a href="javascript:;">系统管理</a>
+          <dl class="layui-nav-child">
+            <dd><a href="javascript:;">系统用户</a></dd>
+            <dd><a href="javascript:;">角色管理</a></dd>
+            <dd><a href="javascript:;">权限管理</a></dd>
+            <dd><a href="javascript:;">错误日志</a></dd>
+            <dd><a href="javascript:;">文件管理</a></dd>
+          </dl>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="layui-body">
+    <!-- 内容主体区域 -->
+    <div style="padding-top: 15px; padding-left:15px;">
+        <!--内容显示-->
+        <div class="demoTable" id="layerDemo">
+  搜索ID：
+  <div class="layui-inline">
+    <input class="layui-input" name="id" id="demoReload" autocomplete="off" placeholder="关键词"/>
+  </div>
+    <button class="layui-btn" data-type="reload" onClick="search()">搜索  </button>
+      <!--a class="layui-btn" lay-event="edit" data-method="notice" href=""><i class="layui-icon">&#xe654;</i>新增       </a-->
+      <button data-method="notice" class="layui-btn">
+           <i class="layui-icon">&#xe654;</i>新增
+      </button>    
+</div>   
+<table class="layui-table" lay-skin="nob" id="test">
+  <thead>
+    <tr>
+      <th >ID</th>
+      <th >年级名</th>
+      <th >年级描述</th>
+      <th >届</th>
+      <th >开始时间</th>
+      <th >结束时间</th>
+      <th >状态</th>
+      <th >操作</th>
+      <!--<th lay-data="{width:80, sort: true}">ID</th>
+      <th lay-data="{width:100,sort: true}">年级名</th>
+      <th lay-data="{width:120}">年级描述</th>
+      <th lay-data="{width:100}">届</th>
+      <th lay-data="{width:140}">开始时间</th>
+      <th lay-data="{width:140}">结束时间</th>
+      <th lay-data="{width:80}">状态</th>
+      <th >操作</th>-->
+    </tr>
+    </thead>
+    <tbody>
+    {foreach $info as $list}
+    <tr>
+      <th>{$list.id}</th>
+      <th>{$list.name}</th>
+      <th>{$list.content}</th>
+      <th>{$list.graduates}</th>
+      <th>{$list.starttime}</th>
+      <th>{$list.endtime}</th>
+      <th>
+        {if condition = "$list.status eq 1"}正常
+        {elseif condition = "$list.status eq 9"}删除
+        {/if}
+      </th>
+      <th ><a class="layui-btn layui-btn-xs" lay-event="edit" href="">编辑</a>
+        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del" href="{:url('index/delete',['id'=>$list.id])}">删除</a>
+      </th>
+    </tr>
+    {/foreach}
+   </tbody>
+</table>
+      </div>
+  </div>
+  
+  <!--div class="layui-footer" align="center">
+    <!-- 底部固定区域 >
+    版权信息：&copy;电子科技大学成都学院，云计算科学与技术系所有		    2020-2021
+  </div-->
+</div>
+<script src="__STATIC__/layui/layui.js"></script>
+<script>
+//JavaScript代码区域
+layui.use('element', function(){
+  var element = layui.element;
+});
+</script>
+<!--分页显示 -->
+<div id="LAY_democodejs" style="">
+<script>
+layui.use('table', function(){
+  var table = layui.table;
+  
+  //方法级渲染
+  table.render();
+  table.on('tool(demo)', function(obj){
+    var data = obj.data;
+    if(obj.event === 'del'){
+      layer.confirm('真的删除行么', function(index){
+        obj.del();
+        layer.close(index);
+      });
+    } 
+  });
+});
+layui.use('layer', function(){ //独立版的layer无需执行这一句
+  var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
+  
+  //触发事件
+  var active = {
+    notice: function(){
+      //示范一个
+      layer.open({
+        type: 1
+        ,title: '添加'//不显示标题栏
+        //,closeBtn: 0
+        ,area: '500px;'
+        ,shade: 0.4
+        ,id: 'LAY_layuipro' //设定一个id，防止重复弹出
+        ,btn: ['添加', '取消']
+        ,btnAlign: 'c'
+        ,moveType: 1 //拖拽模式，0或者1
+        ,content: 'add.html'
+        ,success: function(layero){
+          var btn = layero.find('.layui-layer-btn');
+          btn.find('.layui-layer-btn0').attr({
+            href: 'http://www.layui.com/'
+            ,target: '_blank'
+          });
+        }
+      });
+    }
+  };
+  
+  $('#layerDemo .layui-btn').on('click', function(){
+    var othis = $(this), method = othis.data('method');
+    active[method] ? active[method].call(this, othis) : '';
+  });
+  
+});
+</script>
+
+</body>
+</html>

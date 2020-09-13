@@ -1,0 +1,275 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>资料</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link href="__STATIC__/users/js/layui/css/layui.css" rel="stylesheet">
+<script src="__STATIC__/users/js/layui/layui.js"></script>
+<style>
+
+body{
+	text-align:center
+	} 
+#bg{
+	background:url("__STATIC__/images/5.jpg") no-repeat }
+#logo ul{
+	list-style-type:none;
+	margin:5px;
+	padding:0;
+		}
+#logo li{
+	float:left;
+	line-height:25px;
+	}
+#logo li a{
+	display:block;
+	width:100px;
+	color:#03F;
+	text-decoration:none;
+	}
+#top ul{
+	list-style-type:none;
+	margin:5px;
+	padding:0;
+		}
+#top li{
+	float:right;
+	font-size:12px;
+	line-height:15px;
+	}
+#top li a{
+	display:block;
+	width:100px;
+	color:#03F;
+	text-decoration:none;
+	}
+/* .layui-nav {
+    position: relative;
+    padding: 0 20px;
+    background-color: rgb(250, 250, 250);
+    color: #393D49; */
+#col ul{
+		list-style-type:none;
+		}
+#col li{
+	float:left;
+	text-align:center;
+	line-height:30px;
+	}
+#col li a{
+	display:block;
+	width:200px;
+	color:#03F;
+	text-decoration:none;
+	}
+</style>
+</head>
+
+<body>
+<!-- 头部 -->
+<div class="layui-row margin-top-10 padding-20 " style="background-color:rgb(250, 250, 250)">
+	<div class="layui-row layui-col-space20">
+		<div class="layui-col-md1" >
+		
+		</div>
+		<div class="layui-col-md3" id="logo">
+			
+			<img src="__STATIC__/users/images/logo1.png" width="80%" height="80%" class="left"/>
+			
+		</div>
+		<div class="layui-col-md3" >
+		
+		</div>
+		<div class="right layui-col-md4" id="top" >
+		<ul class="pc-nav">
+			<li><a href="#">首页</a></li>
+			<li><a href="#">语言</a></li>
+			<li><a href="#">登陆</a></li>
+		</ul>
+		</div>
+		<div class="layui-col-md1" >
+		
+		</div>
+	</div>
+</div>
+
+<!-- 搜索 -->
+<div class="col search" id="search" style="background-color:rgb(250, 250, 250)">
+      <form action="index.php" >
+			
+      <input class="placeholder" placeholder="搜索……" name="s" autocomplete="off">
+      <input type="submit" id="su" value="搜索" class="searchbt">
+      <!--<input type="search" id="su" value="搜索" class="searchbt">-->
+			
+      </form>
+</div>
+<!-- 导航栏 -->
+<!-- <div class="navigation">
+	<div class="row">
+		<div class="col nav" id="col">
+			<ul class="pc-nav">
+				<li><a href="#">首页</a></li>
+				<li><a href="#">区域资源赋能场</a></li>
+				<li><a href="#">中国便车快通道</a></li>
+				<li><a href="#">国家元首议程表</a></li>
+				<li><a href="#">资料</a></li>	
+      		</ul>			
+		</div>
+	</div>
+</div> -->
+<div>
+	
+	<ul class="layui-nav" lay-filter="">
+	  <li class="layui-nav-item" style="color: #007DDB;"><a href="">首页</a></li>
+	  <li class="layui-nav-item "><a href="">区域资源赋能场</a></li>
+	  <li class="layui-nav-item"><a href="">中国便车快通道</a></li>
+	  <li class="layui-nav-item"><a href="">国家元首议程表</a></li>
+	  <li class="layui-nav-item layui-this">
+		<a href="javascript:;">资料</a>
+		<dl class="layui-nav-child"> <!-- 二级菜单 -->
+		  <dd><a href="">党的文献</a></dd>
+		  <dd><a href="">法律法规</a></dd>
+		  <dd><a href="">两会文件</a></dd>
+		  <dd><a href="">转向政策</a></dd>
+		  <dd><a href="">领导讲话</a></dd>
+		  <dd><a href="">标准规范</a></dd>
+		  <dd><a href="">重大事件</a></dd>
+		</dl>
+	  </li>
+	</ul>
+</div>
+ 
+<script>
+//注意：导航 依赖 element 模块，否则无法进行功能性操作
+layui.use('element', function(){
+  var element = layui.element;
+  
+  //…
+});
+</script>
+<!-- 动态图片效果-->
+
+<div class="layui-row margin-top-10 padding-20 " style="background-color:rgb(250, 250, 250)">
+	<div class="layui-row layui-col-space20">
+		<div class="layui-col-md12" >
+				<div class="layui-carousel margin-top-20 padding-10" id="test1" >
+					<div id="bg">
+						<img src="__STATIC__/users/images//5.jpg" width="100%" height="100%"/>
+						涉外政府服务系统上线
+					</div>
+				</div>
+		</div>
+		<div class="layui-col-md2" >
+				<div class="layui-carousel margin-top-20 padding-10" id="test1" >
+					<div>
+						
+					</div>
+				</div>
+		</div>
+		<div class="layui-col-md2" >
+				<div class="layui-carousel margin-top-20 padding-10" id="test1" >
+					<div>
+						<img src="__STATIC__/users/images/组 1.png" width="50%" height="50%" alt="SPM系统SPM系统SPM系统SPM系统">
+					</div>
+				</div>
+		</div>
+		<div class="layui-col-md2" >
+				<div class="layui-carousel margin-top-20 padding-10" id="test1" >
+					<div>
+						<img src="__STATIC__/users/images/组 2.png" width="50%" height="50%" alt="SPM系统SPM系统SPM系统SPM系统">
+					</div>
+									
+				</div>
+		</div>
+		<div class="layui-col-md2" >
+				<div class="layui-carousel margin-top-20 padding-10" id="test1" >
+					<div>
+						<img src="__STATIC__/users/images/组 3.png" width="50%" height="50%" alt="SPM系统SPM系统SPM系统SPM系统">
+					</div>
+									
+				</div>
+		</div>
+		<div class="layui-col-md2" >
+				<div class="layui-carousel margin-top-20 padding-10" id="test1" >
+					<div>
+						<img src="__STATIC__/users/images/组 4.png" width="50%" height="50%" alt="SPM系统SPM系统SPM系统SPM系统">
+					</div>
+									
+				</div>
+		</div>
+		<div class="layui-col-md12" >
+				<div class="layui-carousel margin-top-20 padding-10" id="test1" >
+					<div>
+						
+					</div>
+									
+				</div>
+		</div>
+		
+		<div class="layui-col-md2" >
+				<div class="layui-carousel margin-top-20 padding-10" id="test1" >
+					<div>
+						
+					</div>
+									
+				</div>
+		</div>
+		<div class="layui-col-md2" >
+				<div class="layui-carousel margin-top-20 padding-10" id="test1" >
+					<div>
+						<img src="__STATIC__/users/images/组 5.png" width="50%" height="50%" alt="SPM系统SPM系统SPM系统SPM系统">
+					</div>
+									
+				</div>
+		</div>
+		<div class="layui-col-md2" >
+				<div class="layui-carousel margin-top-20 padding-10" id="test1" >
+					<div>
+						<img src="__STATIC__/users/images/组 6.png" width="50%" height="50%" alt="SPM系统SPM系统SPM系统SPM系统">
+					</div>
+									
+				</div>
+		</div>
+		<div class="layui-col-md2" >
+				<div class="layui-carousel margin-top-20 padding-10" id="test1" >
+					<div>
+						<img src="__STATIC__/users/images/组 7.png" width="50%" height="50%" alt="SPM系统SPM系统SPM系统SPM系统">
+					</div>
+					
+				</div>
+		
+		</div>
+		<div class="layui-col-md2" >
+				<div class="layui-carousel margin-top-20 padding-10" id="test1" >
+					<div>
+						
+					</div>
+					
+				</div>
+		
+		</div>
+		<div class="layui-col-md2" >
+				<div class="layui-carousel margin-top-20 padding-10" id="test1" >
+					<div>
+						
+					</div>
+					
+				</div>
+		
+		</div>
+		
+	</div>	
+	
+</div>
+    
+<!--底部-->
+<div class="layui-row layui-col-space20" id="fooder" style="background-color:rgb(250, 250, 250) ">
+		版权信息：&copy;电子科技大学成都学院，云计算科学与技术系所有<br/>
+		2019-2020
+	</div>
+</body>
+</html>
